@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/stylesheet.css' %}">
+    <title>Premier Plumbing</title>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <img src="{% static 'images/LogoText2.png' %}" alt="" height="100%">
+            <a href="#contactUs"><h6>Contact Us</h6></a>
+        </div>
+        <div id="intro">
+            <h1>Premier Plumbing</h1>
+            <h3>Open</h3>
+            <h5>Monday - Friday</h5>
+            <h5>7-9pm</h5>
+        </div>
+        <div id="customerReviews">
+            <h4>Customer Reviews</h4>
+            <div id='reviewsWrapper'>
+                <div class="review">
+                    <p>"Wow this company is great I can't believe it!"</p>
+                    <p>~Tom P.</p>
+                </div>
+                <div class="review">
+                    <p>"Wow this company is great I can't believe it!"</p>
+                    <p>~Sarah L.</p>
+                </div>
+                <div class="review">
+                    <p>"Wow this company is great I can't believe it!"</p>
+                    <p>~Virginia H.</p>
+                </div>
+            </div>
+        </div>
+        <div id="contactUs">
+            <div id="info">
+                <h4>Address</h4>
+                <p>7340 North Ridge Road <br>
+                    Madison, OH 44057 <br> 
+                    USA</p>
+                    <br>
+                <h4>Business Hours</h4>
+                <p>Mon: 7-9pm</p>
+                <p>Tue: 7-9pm</p>
+                <p>Wed: 7-9pm</p>
+                <p>Tues: 7-9pm</p>
+                <p>Fri: 7-9pm</p>
+                <p>Sat: Closed</p>
+                <p>Sun: Closed</p>
+
+                <h4>Phone Number</h4>
+                <br>
+                <p>(555)555-5555</p>
+
+            </div>
+            <div id="contact">
+                <h3>Email Us</h3>
+                {% if submitted %}
+                    <p>Your message has been sent. <br>
+                        We'll get back to you as soon as we can
+                    </p>
+                {% else %}
+                    <form action="" method="post" novalidate>
+                        {{ form.as_table }}
+                        <input type="submit" value="Submit" id="formSubmit">
+                        {% csrf_token %}
+                    </form>
+                {% endif %}
+            </div>
+        </div>
+        <div id="footer">
+            <img src="{% static 'images/LogoText3.png' %}" alt="" height="60px">
+            <p>Copyright © 2022 Premier Plumbing</p>
+            <p>Website By: <a href="">DevShark</a></p>
+            
+        </div>
+    </div>
+</body>
+
+<style>
+    #intro{
+        background-image: url("{% static 'images/backsplash.png' %}") 100% 0 no-repeat;
+        background-size: cover;
+    }
+</style>
+</html>
