@@ -13,41 +13,48 @@ h1{
     font-size: 500%;
     font-weight: 400;
     color: rgb(25, 159, 226);
+    font-family: Inter;
 }
 
 h3{
     font-size: 275%;
-    font-weight: 100;
+    font-weight: 300;
     border-bottom: solid;
     border-bottom-width: 1px;
     padding-left: 60px;
     padding-right: 60px;
     color: rgb(25, 159, 226);
+    font-family: Inter;
 }
 
 h4{
     font-size: 200%;
-    font-weight: 100;
+    font-weight: 200;
     border-bottom: solid;
     border-bottom-width: 1px;
     padding-left: 100px;
     padding-right: 100px;
+    font-family: Inter;
 }
 
 h5{
     font-size: 175%;
-    font-weight: 100;
+    font-weight: 200;
     color: rgb(25, 159, 226);
+    font-family: Inter;
 }
 
 h6{
     font-size: 125%;
-    font-weight: 100;
+    font-weight: 500;
     font-variant: small-caps;
+    font-family: Inter;
+    color: rgb(25, 159, 226);
 }
 
 a{
     text-decoration: none;
+    font-family: Inter;
 }
 
 #header{
